@@ -8,5 +8,5 @@ Ninsho.setup do |config|
 
 
   #Omniauth Providers
-  #config.omniauth :facebook, "APP_ID", "APP_SECRET", :scope => 'email'
+  config.omniauth :facebook, "1408192656070863", "d6de7f2bfa44c7ca2ce1c29f6e142f39", :scope => 'email'
 end
