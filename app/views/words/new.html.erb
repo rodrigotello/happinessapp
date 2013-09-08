@@ -1,0 +1,7 @@
+<h1>¿Qué te hace feliz?</h1>
+
+<%= form_for (@word) do |f| %>
+	<%= f.text_field :text %>
+	<%= f.select 'color_id', options_from_collection_for_select(@colors, 'id', 'name') %>
+	<%= f.submit "Compartir" %>
+<% end %>

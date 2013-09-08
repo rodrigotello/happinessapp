@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
+  	@words = Word.all
   end
 
   def about

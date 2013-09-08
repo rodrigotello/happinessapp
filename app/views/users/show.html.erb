@@ -1,0 +1,8 @@
+<h1> The happy words of <%= @user.name %> <h1>
+	<% if current_user.id == @user.id %>
+	<%= link_to "Edit profile", edit_user_path, class: "btn" %>
+	<% end %>
+	<% @user.words.all.each do |w| %>
+		<div class=<%= w.color.name %> ><p><%= w.text %></p></div>
+	<% end %>
+

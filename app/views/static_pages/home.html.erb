@@ -1,4 +1,4 @@
-<h1>Home</h1>
+<h1>Welcome to The Happy App!</h1>
 
 <% if user_signed_in? %>
   Logged in as <%= current_user.email %> |
@@ -6,3 +6,17 @@
 <% else %>
   <%= link_to 'Sign in', new_authentication_session_path %>
 <% end %>
+
+<br/>
+<br/>
+
+<%= link_to "Share a happy word", new_word_path , class: "btn btn-large" %>
+
+<h2>Here are some happy words:</h2>
+
+	<% @words.each do |w| %>
+		<p><div class=<%= w.color.name %> ><h1><%= w.text %></h1></div> makes <%= w.user.name %> happy.</p>
+		<br/>
+	<% end %>
+
+

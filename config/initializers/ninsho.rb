@@ -8,5 +8,10 @@ Ninsho.setup do |config|
 
 
   #Omniauth Providers
-  config.omniauth :facebook, "1408192656070863", "d6de7f2bfa44c7ca2ce1c29f6e142f39", :scope => 'email'
+	if Rails.env == "development" || Rails.env="test"
+  		config.omniauth :facebook, "1408192656070863", "d6de7f2bfa44c7ca2ce1c29f6e142f39", :scope => 'email'
+	  else
+		config.omniauth :facebook, "32093ec4ca7161a28c6b9bdb0be36aa1", "32093ec4ca7161a28c6b9bdb0be36aa1", :scope => 'email'
+	end
+
 end

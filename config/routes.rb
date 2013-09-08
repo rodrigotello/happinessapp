@@ -1,5 +1,7 @@
 Happinessapp::Application.routes.draw do
 
+  resources :words
+
   root :to => 'static_pages#home'
 
   get "static_pages/home"
@@ -13,6 +15,8 @@ Happinessapp::Application.routes.draw do
   resources :users
 
   ninsho_on :authentications
+
+  get "/sign_out", to: 'sessions#destroy'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

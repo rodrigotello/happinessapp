@@ -1,0 +1,7 @@
+Tell us your name:
+
+<%= form_for(@user) do |f| %>
+<%= f.text_field :name %>
+<br/>
+<%= f.submit "Save", class: "btn" %>
+<% end %>
